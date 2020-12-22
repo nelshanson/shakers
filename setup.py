@@ -16,5 +16,6 @@ setuptools.setup(
     entry_points = {
         'console_scripts': ['shakers=shakers.__main__:_main']
     },
+    install_requires=['pytest']
     python_requires='>=3.6',
 )
