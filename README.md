@@ -10,3 +10,6 @@ This is installable as a command line script. Simply
 
 Once the package has been installed, the game can be run on a specified board file as
 > shakers /path/to/gameboard/file.txt
+
+Also once installed, tests can be run by running
+> pytest
