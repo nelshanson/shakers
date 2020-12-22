@@ -15,6 +15,6 @@ setuptools.setup(
     packages=setuptools.find_packages(),
     entry_points = {
         'console_scripts': ['shakers=shakers.__main__:_main']
-    }
+    },
     python_requires='>=3.6',
 )
