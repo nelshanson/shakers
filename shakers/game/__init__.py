@@ -1,2 +1,2 @@
 from .person import Person
-from .directions import Direction
+from .game_board import GameBoard

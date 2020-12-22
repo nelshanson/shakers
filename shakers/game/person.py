@@ -1,40 +1,38 @@
-from .directions import Direction
-
 class Person:
     
-    def __init__(self, direction: Direction, x: int, y: int):
+    def __init__(self, direction: str, r: int, c: int):
         self._direction = direction
-        self._x = x
-        self._y = y
+        self._r = r
+        self._c = c
 
     def __repr__(self):
         return "Person({!r}, {}, {})".format(
             self._direction,
-            self._x,
-            self._y
+            self._r,
+            self._c
         )        
 
     def __str__(self):
         return "{!r}".format(self)
 
     @property
-    def x(self):
-        return self._x
+    def row(self):
+        return self._r
 
     @property
-    def y(self):
-        return self._y
+    def col(self):
+        return self._c
 
     @property
     def coords(self):
-        return (self._x, self._y)
+        return (self._r, self._c)
 
     def move(self):
-        if self._direction is Direction.U:
-            self._y += 1
-        elif self._direction is Direction.D:
-            self._y -= 1
-        elif self._direction is Direction.R:
-            self._x += 1
+        if self._direction is 'U':
+            self._r -= 1
+        elif self._direction is 'D':
+            self._r += 1
+        elif self._direction is 'R':
+            self._c += 1
         else:
-            self._x -= 1
+            self._c -= 1
