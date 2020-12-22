@@ -33,9 +33,7 @@ class GameBoard:
 
     def _play_round(self):
         # Move each player
-        print(self._people)
         [person.move() for person in self._people]
-        print(self._people)
 
         # Sweep up out of bounds and trapped people
         self._sweep()
